@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+/* Header Design : - */
+.header{
+    width: 100%;
+    height: 5.5vmax;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1{
+    color: aliceblue;
+    font-size: 3vmax;
+}
+
+.header span{
+    color: aqua;
+}
+
+/* Main Design :- */
+.main{
+    width: 100%;
+    height: calc(100% - 8.5vmax);
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .clock-section{
+   height: 28vmax;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid red;
+    background-color: aliceblue;
+    color: red;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px aliceblue;
+
+}
+
+.clock-section span{
+position: absolute;
+   transform: rotate(calc(30deg * var(--i)));
+   inset: 0.7vmax;
+   text-align: center;
+}
+
+.clock-section span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 3vmax;
+}
+
+.clock-section::before{
+    content: "";
+    position: absolute;
+    height: 1.4vmax;
+    width: 1.4vmax;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hour i{
+    position: absolute;
+    width: 0.9vmax;
+    height: 6vmax;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.minute i{
+    position: absolute;
+    width: 0.7vmax;
+    height: 9vmax;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.second i{
+    position: absolute;
+    width: 0.5vmax;
+    height: 9.5vmax;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+/* Footer Design :- */
+.footer{
+    width: 100%;
+    height: 3vmax;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: gray;
+}
+
+.footer p{
+    color: aliceblue;
+    font-size: 2vmax;
+    font-weight: 500;
+}
+
