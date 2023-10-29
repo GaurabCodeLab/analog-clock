@@ -2,19 +2,16 @@ const hh = document.querySelector(".hour");
 const mm = document.querySelector(".minute");
 const ss = document.querySelector(".second");
 
-function rotation(){
+function setRotation(){
     const today = new Date;
     const hour = today.getHours();
     const minute = today.getMinutes();
     const second = today.getSeconds();
-    const hhRotation = 30*hour + minute/2;
-    const mmRotation = 6*minute;
-    const ssRotation = 6*second;
-    hh.style.transform = `rotate(${hhRotation}deg)`;
-    mm.style.transform = `rotate(${mmRotation}deg)`;
-    ss.style.transform = `rotate(${ssRotation}deg)`;
+    ss.style.transform = `rotate(${6*second}deg)`;
+    mm.style.transform = `rotate(${6*minute + 0.1*second}deg)`;
+    hh.style.transform = `rotate(${30*hour + 0.5*minute + (1/120)*second}deg)`;
 }
 
 setInterval(()=>{
-    rotation();
-}, 1000)
+    setRotation()
+}, 1000);
