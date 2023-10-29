@@ -12,25 +12,19 @@
 html, body{
     height: 100%;
     width: 100%;
-}
-
-body{
     background-color: aliceblue;
 }
 
-/* Header Design : - */
+/* Header Design :- */
 .header{
     width: 100%;
-    height: 5.5vmax;
+    height: 5vmax;
     background-color: gray;
+    color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.header h1{
-    color: aliceblue;
-    font-size: 3vmax;
+    font-size: 1.5vmax;
 }
 
 .header span{
@@ -40,50 +34,73 @@ body{
 /* Main Design :- */
 .main{
     width: 100%;
-    height: calc(100% - 8.5vmax);
+    height: calc(100% - 8vmax);
     background-color: black;
-    color: white;
+    color: red;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main .clock-section{
-   height: 28vmax;
+.clock-section{
+    height: 26vmax;
     aspect-ratio: 1/1;
-    border-radius: 50%;
-    border: 2px solid red;
     background-color: aliceblue;
-    color: red;
+    border: 2px solid red;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px aliceblue;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 10px aliceblue;
-
 }
 
 .clock-section span{
-position: absolute;
-   transform: rotate(calc(30deg * var(--i)));
-   inset: 0.7vmax;
-   text-align: center;
+    position: absolute;
+    inset: 0.7vmax;
+    transform: rotate(calc(30deg * var(--i)));
+    text-align: center;
 }
 
 .clock-section span b{
     transform: rotate(calc(-30deg * var(--i)));
     display: inline-block;
-    font-size: 3vmax;
+    font-size: 2.5vmax;
+    font-weight: 700;
 }
 
 .clock-section::before{
     content: "";
-    position: absolute;
-    height: 1.4vmax;
-    width: 1.4vmax;
-    background-color: white;
+    height: 1.3vmax;
+    width: 1.3vmax;
     border-radius: 50%;
+    background-color: aliceblue;
+    position: absolute;
     z-index: 2;
+}
+
+.hour i{
+    width: 1vmax;
+    height: 5vmax;
+    background-color: black;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.minute i{
+    width: 0.8vmax;
+    height: 8vmax;
+    background-color: black;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.second i{
+    width: 0.6vmax;
+    height: 9vmax;
+    background-color: blue;
+    border-radius: 20px;
+    position: absolute;
 }
 
 .hand{
@@ -92,44 +109,18 @@ position: absolute;
     justify-content: center;
     align-items: flex-end;
 }
-
-.hour i{
-    position: absolute;
-    width: 0.9vmax;
-    height: 6vmax;
-    background-color: black;
-    border-radius: 5px;
-}
-
-.minute i{
-    position: absolute;
-    width: 0.7vmax;
-    height: 9vmax;
-    background-color: black;
-    border-radius: 5px;
-}
-
-.second i{
-    position: absolute;
-    width: 0.5vmax;
-    height: 9.5vmax;
-    background-color: blue;
-    border-radius: 5px;
-}
-
 /* Footer Design :- */
 .footer{
     width: 100%;
     height: 3vmax;
+    background-color: gray;
+    color: aliceblue;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    background-color: gray;
+    align-items: center;
 }
 
 .footer p{
-    color: aliceblue;
     font-size: 2vmax;
     font-weight: 500;
 }
-
